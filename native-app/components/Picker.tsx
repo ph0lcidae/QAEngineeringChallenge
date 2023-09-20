@@ -1,10 +1,10 @@
-import {StyleSheet} from 'react-native';
-import RNPickerSelect from 'react-native-picker-select';
+import { StyleSheet } from "react-native";
+import RNPickerSelect from "react-native-picker-select";
 
-function PickerIos({value, onSetValue, items}) {
+function PickerIos({ value, onSetValue, items }) {
   return (
     <RNPickerSelect
-      placeholder={{label: 'Select a machine', value: ''}}
+      placeholder={{ label: "Select a machine", value: "" }}
       items={items}
       onValueChange={(value) => onSetValue(value)}
       value={value}
@@ -19,9 +19,9 @@ const pickerSelectStyles = StyleSheet.create({
     paddingVertical: 12,
     paddingHorizontal: 10,
     borderWidth: 1,
-    borderColor: 'gray',
+    borderColor: "gray",
     borderRadius: 4,
-    color: 'black',
+    color: "black",
     paddingRight: 30, // to ensure the text is never behind the icon
   },
   inputAndroid: {
@@ -29,9 +29,9 @@ const pickerSelectStyles = StyleSheet.create({
     paddingHorizontal: 10,
     paddingVertical: 8,
     borderWidth: 0.5,
-    borderColor: 'gray',
+    borderColor: "gray",
     borderRadius: 8,
-    color: 'black',
+    color: "black",
     paddingRight: 30, // to ensure the text is never behind the icon
     minWidth: 200,
   },
