@@ -39,6 +39,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
+    "@config-plugins/detox": "^6.0.0",
     "@types/react": "~18.2.14",
     "detox": "^20.12.1",
     "detox-expo-helpers": "^0.6.0",
