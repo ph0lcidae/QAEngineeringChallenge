@@ -25,10 +25,11 @@ describe("Machine health calculation user flows", () => {
 
   it("selects a part from the part picker, enters a valid value, and saves", async () => {
     await machineStatePage.switchPage(TestConstants.LOG_PART_NAV_BUTTON);
-    await logPartPage.selectMachineName(TestConstants.WELDING_ROBOT);
-    await logPartPage.selectPartName(TestConstants.SEAM_WIDTH);
-    await logPartPage.setPartValue("2");
-    await logPartPage.saveValues();
+    await logPartPage.logPart(
+      TestConstants.WELDING_ROBOT,
+      TestConstants.SEAM_WIDTH,
+      "2"
+    );
     await expect(
       element(by.text(TestConstants.SAVED_CONFIRM_MSG))
     ).toBeVisible();
@@ -46,35 +47,39 @@ describe("Machine health calculation user flows", () => {
 
   it("selects multiple parts with valid values, saves, and calculates machine state", async () => {
     await machineStatePage.switchPage(TestConstants.LOG_PART_NAV_BUTTON);
-    await logPartPage.selectMachineName(TestConstants.WELDING_ROBOT);
-    await logPartPage.selectPartName(TestConstants.ELECTRODE_WEAR);
-    await logPartPage.setPartValue("0.5");
-    await logPartPage.saveValues();
+    await logPartPage.logPart(
+      TestConstants.WELDING_ROBOT,
+      TestConstants.ELECTRODE_WEAR,
+      "0.5"
+    );
     // wait until we see the confirm message before adding the next part
     await expect(
       element(by.text(TestConstants.SAVED_CONFIRM_MSG))
     ).toBeVisible();
 
-    await logPartPage.selectMachineName(TestConstants.QUALITY_CONTROL);
-    await logPartPage.selectPartName(TestConstants.CAMERA_CALIBRATION);
-    await logPartPage.setPartValue("0.5");
-    await logPartPage.saveValues();
+    await logPartPage.logPart(
+      TestConstants.QUALITY_CONTROL,
+      TestConstants.CAMERA_CALIBRATION,
+      "0.5"
+    );
     await expect(
       element(by.text(TestConstants.SAVED_CONFIRM_MSG))
     ).toBeVisible();
 
-    await logPartPage.selectMachineName(TestConstants.ASSEMBLY_LINE);
-    await logPartPage.selectPartName(TestConstants.ALIGNMENT_ACCURACY);
-    await logPartPage.setPartValue("0.5");
-    await logPartPage.saveValues();
+    await logPartPage.logPart(
+      TestConstants.ASSEMBLY_LINE,
+      TestConstants.ALIGNMENT_ACCURACY,
+      "0.5"
+    );
     await expect(
       element(by.text(TestConstants.SAVED_CONFIRM_MSG))
     ).toBeVisible();
 
-    await logPartPage.selectMachineName(TestConstants.PAINTING_STATION);
-    await logPartPage.selectPartName(TestConstants.COLOR_CONSISTENCY);
-    await logPartPage.setPartValue("92");
-    await logPartPage.saveValues();
+    await logPartPage.logPart(
+      TestConstants.PAINTING_STATION,
+      TestConstants.COLOR_CONSISTENCY,
+      "92"
+    );
     await expect(
       element(by.text(TestConstants.SAVED_CONFIRM_MSG))
     ).toBeVisible();

@@ -26,4 +26,11 @@ export class LogPartPage extends BasePage {
   async saveValues() {
     await element(by.id(TestConstants.SAVE_PART_BUTTON)).tap();
   }
+
+  async logPart(machine, part, value) {
+    await this.selectMachineName(machine);
+    await this.selectPartName(part);
+    await this.setPartValue(value);
+    await this.saveValues();
+  }
 }
