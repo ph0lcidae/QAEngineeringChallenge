@@ -1,6 +1,6 @@
 import express, { Request, Response } from "express";
 import { getMachineHealth } from "./machineHealth";
-import cors from 'cors';
+import cors from "cors";
 
 const app = express();
 const port = 3001;

@@ -13,13 +13,7 @@ Before you get started, make sure you have the following prerequisites installed
 
 Follow these steps to set up the BellSant Machine Health API:
 
-1. Navigate to the project directory:
-
-   ```bash
-   cd api
-   ```
-
-2. Install dependencies using Yarn (or npm if you prefer):
+1. From the `backend` directory, install dependencies using Yarn (or npm if you prefer):
 
    ```bash
    yarn
@@ -69,8 +63,10 @@ You can add and run tests to ensure the correctness of the API. Follow these ste
 3. To run the tests, use the following command:
 
    ```bash
-   yarn test
+   yarn test -- __tests__/calculations.test.ts
    ```
+
+   (If you just run `yarn test`, Jest will try to run everything including the e2e tests.)
 
 ## Customization
 
