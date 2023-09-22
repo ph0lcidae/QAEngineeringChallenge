@@ -43,12 +43,10 @@ The project structure is organized as follows:
 
 The app has the following screens and features:
 
-- **Machine Health**: Allows users to select a machine, part name, and part value, and calculates the health score of the machine.
+- **Machine Health**: Allows users to view their assigned machine and part values, and to calculate the health score of the machine.
 
-## Adding Tests
+- **Log Part**: Allows users to select a machine, part name, and part value, and save them for later calculations.
 
-You are free to choose how you'd like to test this repo, think about options and approaches and build out (and document!) what you think would be an appropriate testing infrastructure. Hint: think about a combo of unit tests and integration tests, there is an android APK in the root of the exercise if it's helpful.
+## Tests
 
-## Customization
-
-If you would like, feel free to modify the app as needed.
+There is a suite of unit and end-to-end tests for both the backend and native app. Please see the README in `native-app/e2e` for details on how to run the existing tests and add your own.
