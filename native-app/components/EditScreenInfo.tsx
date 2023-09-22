@@ -31,6 +31,7 @@ export default function EditScreenInfo({ path }: { path: string }) {
       label: "Cooling Efficiency",
     },
     { value: "electrodeWear", label: "Electrode Wear" },
+    { value: "errorRate", label: "Error Rate" },
     { value: "seamWidth", label: "Seam Width" },
     {
       value: "shieldingPressure",
