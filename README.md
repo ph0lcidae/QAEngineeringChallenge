@@ -2,6 +2,8 @@
 
 Now with 100% more test tools: unit tests with Jest and E2E tests with Detox.
 
+## If you found this because I applied for a job with you or something: please note that I would not write these tests this way now but I've left it as an example of what not to do
+
 #### Machines and Their Variables
 
 1. **Welding Robots**
